@@ -1,0 +1,417 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#081426">
+  <meta name="description" content="PERMITEX GLOBAL MANDIRI membantu kebutuhan pendirian badan usaha, administrasi perusahaan, dan pendampingan legalitas bisnis.">
+  <title>PERMITEX GLOBAL MANDIRI | Business & Legal Support</title>
+  <style>
+    :root {
+      --navy: #081426;
+      --navy2: #102442;
+      --gold: #c9a45c;
+      --cream: #f7f5f0;
+      --white: #fff;
+      --muted: #b9c4d4;
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      color: #19253a;
+      line-height: 1.7;
+      background: var(--cream);
+    }
+    a { text-decoration: none; }
+    .container { width: min(1120px, 90%); margin: auto; }
+
+    header {
+      background: rgba(8,20,38,.97);
+      color: white;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      border-bottom: 1px solid rgba(201,164,92,.35);
+    }
+    nav {
+      min-height: 78px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+    }
+    .brand {
+      color: white;
+      font-size: 18px;
+      font-weight: 800;
+      letter-spacing: 1px;
+      line-height: 1.25;
+    }
+    .brand span {
+      display: block;
+      color: var(--gold);
+      font-size: 11px;
+      letter-spacing: 4px;
+      margin-top: 5px;
+    }
+    .navlinks { display: flex; gap: 22px; align-items: center; }
+    .navlinks a { color: #f5f5f5; font-size: 13px; }
+    .navlinks a:hover { color: var(--gold); }
+
+    .hero {
+      background:
+        radial-gradient(ellipse at 80% 20%, #1c365b 0%, transparent 45%),
+        linear-gradient(130deg, var(--navy), #102441 70%, #081426);
+      color: white;
+      padding: 100px 0 95px;
+      overflow: hidden;
+    }
+    .eyebrow {
+      color: var(--gold);
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      font-size: 12px;
+      font-weight: bold;
+    }
+    h1 {
+      font-size: clamp(36px, 5vw, 62px);
+      line-height: 1.12;
+      letter-spacing: -1.5px;
+      margin: 20px 0;
+      max-width: 800px;
+    }
+    h1 em { color: var(--gold); font-style: normal; }
+    .hero p { max-width: 650px; color: var(--muted); font-size: 17px; }
+    .actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 30px; }
+    .btn {
+      display: inline-block;
+      padding: 13px 22px;
+      border-radius: 5px;
+      font-weight: bold;
+      font-size: 14px;
+      transition: .2s;
+    }
+    .btn-gold { background: var(--gold); color: var(--navy); }
+    .btn-outline { border: 1px solid #718096; color: white; }
+    .btn:hover { transform: translateY(-2px); }
+
+    .trust {
+      background: white;
+      border-bottom: 1px solid #e5e2da;
+    }
+    .trust-inner {
+      display: grid;
+      grid-template-columns: repeat(3,1fr);
+      gap: 20px;
+      padding: 24px 0;
+      text-align: center;
+      font-size: 13px;
+      font-weight: bold;
+    }
+    .trust strong { color: #9a7534; display: block; font-size: 15px; }
+
+    section { padding: 76px 0; }
+    .section-head { max-width: 700px; margin-bottom: 34px; }
+    .section-head h2 {
+      color: var(--navy);
+      font-size: clamp(28px,4vw,39px);
+      line-height: 1.2;
+      margin: 10px 0;
+    }
+    .section-head p { color: #637087; }
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(3,1fr);
+      gap: 20px;
+    }
+    .card {
+      background: white;
+      border: 1px solid #e8e5dd;
+      border-radius: 10px;
+      padding: 27px;
+      box-shadow: 0 8px 25px rgba(10,25,45,.04);
+    }
+    .number { color: var(--gold); font-weight: 800; font-size: 13px; }
+    .card h3 { color: var(--navy); font-size: 19px; margin: 9px 0; }
+    .card p { color: #687489; font-size: 14px; margin-bottom: 0; }
+
+    .about { background: white; }
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 55px;
+      align-items: center;
+    }
+    .about h2 { color: var(--navy); font-size: 36px; line-height: 1.2; }
+    .about p { color: #647087; }
+    .principles {
+      background: var(--navy);
+      color: white;
+      border-radius: 12px;
+      padding: 30px;
+    }
+    .principles h3 { color: var(--gold); margin-top: 0; }
+    .principles li { margin: 10px 0; color: #d5dce7; }
+
+    .process { background: #f0eee8; }
+    .step {
+      display: flex;
+      gap: 18px;
+      margin-bottom: 22px;
+    }
+    .step-num {
+      flex: 0 0 38px;
+      height: 38px;
+      display: grid;
+      place-items: center;
+      border-radius: 50%;
+      background: var(--navy);
+      color: var(--gold);
+      font-weight: bold;
+    }
+    .step h3 { margin: 0; font-size: 17px; color: var(--navy); }
+    .step p { margin: 4px 0 0; color: #657187; font-size: 14px; }
+
+    .contact {
+      background: var(--navy);
+      color: white;
+    }
+    .contact h2 { font-size: clamp(28px,4vw,40px); line-height: 1.2; }
+    .contact p { color: var(--muted); }
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1.1fr .9fr;
+      gap: 40px;
+      align-items: center;
+    }
+    .contact-box {
+      padding: 25px;
+      border: 1px solid #344660;
+      border-radius: 10px;
+      background: rgba(255,255,255,.035);
+    }
+    .contact-box a { color: var(--gold); overflow-wrap: anywhere; }
+    footer {
+      background: #050d19;
+      color: #aab4c4;
+      padding: 25px 0;
+      font-size: 12px;
+    }
+    footer .container {
+      display: flex;
+      justify-content: space-between;
+      gap: 15px;
+      flex-wrap: wrap;
+    }
+
+    @media (max-width: 760px) {
+      .navlinks { gap: 12px; }
+      .navlinks a { font-size: 11px; }
+      .brand { font-size: 14px; }
+      .brand span { font-size: 9px; letter-spacing: 2px; }
+      .hero { padding: 75px 0; }
+      .trust-inner { grid-template-columns: 1fr; gap: 14px; }
+      .cards, .about-grid, .contact-grid { grid-template-columns: 1fr; }
+      section { padding: 55px 0; }
+      .about-grid { gap: 25px; }
+    }
+    @media (max-width: 420px) {
+      .navlinks { gap: 8px; }
+      .navlinks a { font-size: 10px; }
+      .brand { font-size: 12px; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <nav class="container">
+      <a class="brand" href="#home">
+        PERMITEX
+        <span>GLOBAL MANDIRI</span>
+      </a>
+      <div class="navlinks">
+        <a href="#layanan">Layanan</a>
+        <a href="#tentang">Tentang</a>
+        <a href="#kontak">Kontak</a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="container">
+        <div class="eyebrow">Business & Legal Support</div>
+        <h1>Bangun Bisnis dengan <em>Langkah yang Tepat.</em></h1>
+        <p>
+          PERMITEX GLOBAL MANDIRI mendampingi kebutuhan pendirian badan usaha,
+          administrasi bisnis, dan persiapan legalitas agar perjalanan usaha
+          Anda lebih terarah dan terorganisasi.
+        </p>
+        <div class="actions">
+          <a class="btn btn-gold" href="#kontak">Konsultasi Sekarang</a>
+          <a class="btn btn-outline" href="#layanan">Jelajahi Layanan</a>
+        </div>
+      </div>
+    </section>
+
+    <div class="trust">
+      <div class="container trust-inner">
+        <div><strong>Profesional</strong>Pendampingan terarah</div>
+        <div><strong>Transparan</strong>Ruang lingkup jelas</div>
+        <div><strong>Terintegrasi</strong>Kebutuhan bisnis dalam satu mitra</div>
+      </div>
+    </div>
+
+    <section id="layanan">
+      <div class="container">
+        <div class="section-head">
+          <div class="eyebrow">Layanan Kami</div>
+          <h2>Dukungan untuk Kebutuhan Bisnis Anda</h2>
+          <p>
+            Layanan disesuaikan dengan bentuk usaha, kegiatan, lokasi,
+            persyaratan, serta ruang lingkup pekerjaan yang disepakati.
+          </p>
+        </div>
+        <div class="cards">
+          <article class="card">
+            <div class="number">01 / BUSINESS SETUP</div>
+            <h3>Pendirian Badan Usaha</h3>
+            <p>Pendampingan pendirian PT Perorangan, PT, CV, Firma, dan bentuk usaha lain sesuai ketentuan.</p>
+          </article>
+          <article class="card">
+            <div class="number">02 / BUSINESS LICENSING</div>
+            <h3>OSS, NIB & KBLI</h3>
+            <p>Pendampingan administrasi usaha, pemetaan KBLI, serta pemeriksaan kebutuhan perizinan berdasarkan kegiatan bisnis.</p>
+          </article>
+          <article class="card">
+            <div class="number">03 / SPATIAL PLANNING</div>
+            <h3>KKPR / PKKPR</h3>
+            <p>Pendampingan dokumen kesesuaian kegiatan pemanfaatan ruang berdasarkan lokasi dan ketentuan yang berlaku.</p>
+          </article>
+          <article class="card">
+            <div class="number">04 / ENVIRONMENT</div>
+            <h3>Dokumen Lingkungan</h3>
+            <p>Pendampingan penapisan dan persiapan dokumen lingkungan sesuai karakteristik kegiatan usaha.</p>
+          </article>
+          <article class="card">
+            <div class="number">05 / BUILDING</div>
+            <h3>PBG & SLF</h3>
+            <p>Koordinasi persiapan dokumen bangunan dan pendampingan proses sesuai persyaratan teknis.</p>
+          </article>
+          <article class="card">
+            <div class="number">06 / BUSINESS SUPPORT</div>
+            <h3>Administrasi & Dokumen</h3>
+            <p>Pengelolaan dokumen perusahaan, administrasi proyek, dan dukungan kebutuhan bisnis berdasarkan kesepakatan.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="about" id="tentang">
+      <div class="container about-grid">
+        <div>
+          <div class="eyebrow">Tentang Kami</div>
+          <h2>Mitra Profesional untuk Langkah Bisnis Anda</h2>
+          <p>
+            PERMITEX GLOBAL MANDIRI menyediakan pendampingan administrasi
+            usaha dan kebutuhan legalitas bisnis dengan pendekatan yang
+            terstruktur, komunikatif, dan berorientasi pada kebutuhan klien.
+          </p>
+          <p>
+            Kami membantu klien memahami tahapan, menyiapkan dokumen, dan
+            menindaklanjuti proses sesuai ruang lingkup layanan yang disepakati.
+          </p>
+        </div>
+        <div class="principles">
+          <h3>Prinsip Kerja Kami</h3>
+          <ul>
+            <li>Kejelasan ruang lingkup dan biaya.</li>
+            <li>Pengelolaan dokumen secara tertib.</li>
+            <li>Komunikasi dan pembaruan progres.</li>
+            <li>Koordinasi dengan pihak berwenang atau tenaga kompeten bila diperlukan.</li>
+            <li>Tidak menjanjikan penerbitan izin di luar kewenangan kami.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="process">
+      <div class="container">
+        <div class="section-head">
+          <div class="eyebrow">Alur Layanan</div>
+          <h2>Jelas dari Awal hingga Tindak Lanjut</h2>
+        </div>
+        <div class="step">
+          <div class="step-num">1</div>
+          <div>
+            <h3>Konsultasi Awal</h3>
+            <p>Ceritakan kebutuhan dan kondisi usaha Anda kepada tim kami.</p>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-num">2</div>
+          <div>
+            <h3>Pemeriksaan Kebutuhan</h3>
+            <p>Kami memetakan dokumen, persyaratan, dan ruang lingkup pekerjaan.</p>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-num">3</div>
+          <div>
+            <h3>Penawaran dan Persetujuan</h3>
+            <p>Biaya, tahapan, dan keluaran pekerjaan dijelaskan sebelum proses dimulai.</p>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-num">4</div>
+          <div>
+            <h3>Pendampingan dan Tindak Lanjut</h3>
+            <p>Proses ditindaklanjuti sesuai persyaratan dan kesepakatan dengan klien.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact" id="kontak">
+      <div class="container contact-grid">
+        <div>
+          <div class="eyebrow">Hubungi Kami</div>
+          <h2>Mari Diskusikan Kebutuhan Bisnis Anda.</h2>
+          <p>
+            Hubungi PERMITEX GLOBAL MANDIRI untuk konsultasi awal dan
+            informasi ruang lingkup layanan.
+          </p>
+          <div class="actions">
+            <a class="btn btn-gold"
+               href="https://wa.me/6282343911117?text=Halo%20PERMITEX%20GLOBAL%20MANDIRI%2C%20saya%20ingin%20konsultasi%20layanan."
+               target="_blank" rel="noopener noreferrer">Chat WhatsApp</a>
+            <a class="btn btn-outline"
+               href="mailto:permitexglobalmandiri2@gmail.com">Kirim Email</a>
+          </div>
+        </div>
+        <div class="contact-box">
+          <h3>PERMITEX GLOBAL MANDIRI</h3>
+          <p>WhatsApp<br><a href="https://wa.me/6282343911117" target="_blank" rel="noopener noreferrer">+62 823-4391-1117</a></p>
+          <p>Email<br><a href="mailto:permitexglobalmandiri2@gmail.com">permitexglobalmandiri2@gmail.com</a></p>
+          <p>Alamat administrasi<br>Jl. Langlangbuana No. 425, Kuningan, Jawa Barat 45511</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <div>© <span id="year"></span> PERMITEX GLOBAL MANDIRI</div>
+      <div>Business & Legal Support</div>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
