@@ -1,311 +1,355 @@
-
 <!DOCTYPE html>
 <html lang="id">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="theme-color" content="#081426">
-  <meta name="description" content="PERMITEX GLOBAL MANDIRI membantu kebutuhan pendirian badan usaha, administrasi perusahaan, dan pendampingan legalitas bisnis.">
-  <title>PERMITEX GLOBAL MANDIRI | Business & Legal Support</title>
+  <meta name="theme-color" content="#0b1424">
+  <meta name="description" content="PERMITEX GLOBAL MANDIRI mendampingi kebutuhan pendirian badan usaha, perizinan, dan dukungan teknis bisnis secara profesional dan terarah.">
+  <title>PERMITEX GLOBAL MANDIRI | Luxury Business &amp; Legal Support</title>
   <style>
-    :root {
-      --navy: #081426;
-      --navy2: #102442;
-      --gold: #c9a45c;
-      --cream: #f7f5f0;
-      --white: #fff;
-      --muted: #b9c4d4;
+    :root{
+      --navy:#0b1424; --navy-2:#101f35; --navy-3:#172a43;
+      --gold:#c9a45c; --gold-light:#e5cb8c; --cream:#f5f1e8;
+      --paper:#fffdf8; --ink:#172235; --muted:#aab4c3; --line:rgba(201,164,92,.28);
+      --white:#fff;
     }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth;scroll-padding-top:90px}
+    body{margin:0;font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;color:var(--ink);background:var(--paper);line-height:1.65}
+    a{color:inherit;text-decoration:none}
+    img{max-width:100%;display:block}
+    .container{width:min(1400px,calc(100% - 64px));margin-inline:auto}
+    .eyebrow{display:inline-flex;align-items:center;gap:12px;color:var(--gold);font-size:.72rem;font-weight:800;letter-spacing:.22em;text-transform:uppercase}
+    .eyebrow:before{content:"";width:28px;height:1px;background:currentColor}
+    h1,h2,h3,p{margin-top:0}
+    h1,h2,.serif{font-family:Georgia,"Times New Roman",serif;font-weight:500;letter-spacing:-.035em}
+    h2{font-size:clamp(2.1rem,4vw,3.4rem);line-height:1.12;margin:16px 0}
+    .lead{font-size:1.05rem;color:#c4ccda;max-width:620px}
+    .btn{display:inline-flex;align-items:center;justify-content:center;gap:12px;min-height:48px;padding:13px 20px;border:1px solid transparent;font-size:.86rem;font-weight:750;transition:.25s ease;cursor:pointer}
+    .btn-gold{background:linear-gradient(135deg,var(--gold-light),var(--gold));color:#101827}
+    .btn-gold:hover{transform:translateY(-2px);box-shadow:0 12px 30px #c9a45c2c}
+    .btn-outline{border-color:#ffffff5c;color:white;background:transparent}
+    .btn-outline:hover{border-color:var(--gold);color:var(--gold-light)}
+    .topbar{background:#070d17;color:#cbd2dc;font-size:.74rem;border-bottom:1px solid #ffffff10}
+    .topbar .container{display:flex;justify-content:space-between;gap:18px;padding:9px 0}
+    header{position:sticky;top:0;z-index:50;background:rgba(11,20,36,.96);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+    .nav{height:78px;display:flex;align-items:center;justify-content:space-between;gap:24px}
+    .brand{display:flex;align-items:center;gap:13px;min-width:0}
+    .brand img{width:250px;height:68px;object-fit:contain;object-position:left center}
+    .brand-fallback{display:none;color:white;font-size:1.1rem;font-weight:900;letter-spacing:.09em}
+    .brand-fallback span{display:block;color:var(--gold);font-size:.57rem;letter-spacing:.35em}
+    nav{display:flex;align-items:center;gap:30px;color:#e5e9ef;font-size:.83rem}
+    nav a{transition:color .2s} nav a:hover{color:var(--gold-light)}
+    .nav-cta{padding:11px 15px;font-size:.78rem}
+    .menu-toggle{display:none;background:transparent;border:1px solid #ffffff3b;color:white;padding:10px 12px;font-size:1.1rem}
+    .hero{position:relative;overflow:hidden;background:var(--navy);color:white;min-height:700px;display:flex;align-items:center}
+    .hero:before{content:"";position:absolute;inset:0;background:
+      linear-gradient(90deg,rgba(3,10,19,.96) 0%,rgba(4,13,24,.84) 34%,rgba(4,13,24,.40) 64%,rgba(4,13,24,.10) 100%),
+      linear-gradient(0deg,rgba(3,10,19,.68),transparent 35%),
+      url("https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=2200&q=90") center 48%/cover no-repeat}
+    .hero:after{content:"";position:absolute;width:480px;height:480px;border:1px solid #c9a45c30;right:-110px;top:70px;transform:rotate(45deg);box-shadow:0 0 0 38px #c9a45c08,0 0 0 78px #c9a45c06}
+    .hero-grid{position:relative;z-index:1;display:grid;grid-template-columns:1.05fr .95fr;align-items:center;gap:30px;padding:72px 0 82px}
+    .hero h1{font-size:clamp(3.1rem,6.4vw,5.9rem);line-height:.99;max-width:760px;margin:22px 0 25px}
+    .hero h1 em{font-style:normal;color:var(--gold-light)}
+    .hero-actions{display:flex;gap:13px;flex-wrap:wrap;margin-top:30px}
+    .hero-note{display:flex;align-items:center;gap:14px;margin-top:36px;color:#b8c1ce;font-size:.8rem}
+    .hero-note .line{width:38px;height:1px;background:var(--gold)}
+    .hero-visual{position:relative;min-height:480px;display:flex;align-items:flex-end;justify-content:flex-start}
+    .visual-frame{position:absolute;inset:0 0 16px 20px;border:1px solid #d4b36d9c;pointer-events:none}
+    .visual-inner{position:absolute;inset:18px 18px 0 0;background:
+      linear-gradient(180deg,transparent 40%,rgba(5,12,22,.48)),
+      url("https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1400&q=85") center/cover no-repeat;overflow:hidden}
+    .visual-inner:before{content:"";position:absolute;inset:0;background:linear-gradient(135deg,#07111f18,#07111f50)}
+    .visual-inner:after{content:"";position:absolute;inset:16px;border:1px solid #d7b87565}
+    .visual-label{position:absolute;z-index:2;bottom:0;left:0;background:linear-gradient(135deg,#ead39b,#bc9141);color:#101827;padding:18px 22px;max-width:285px;box-shadow:0 18px 40px #0004}
+    .visual-label strong{display:block;font-family:Georgia,serif;font-size:1.45rem;font-weight:500;line-height:1.15}
+    .visual-label span{display:block;margin-top:6px;font-size:.67rem;font-weight:800;letter-spacing:.13em;text-transform:uppercase}
+    .trust-strip{background:#fff;border-bottom:1px solid #e9e3d8}
+    .trust-grid{display:grid;grid-template-columns:repeat(4,1fr);padding:23px 0}
+    .trust-item{padding:4px 28px;border-right:1px solid #e9e3d8}
+    .trust-item:first-child{padding-left:0}.trust-item:last-child{border:0}
+    .trust-item strong{display:block;color:#18263a;font-family:Georgia,serif;font-size:1.15rem;font-weight:500}
+    .trust-item span{color:#697486;font-size:.78rem}
+    section{padding:100px 0}
+    .section-head{max-width:700px;margin-bottom:44px}
+    .section-head p{color:#687486;max-width:620px}
+    .services{background:var(--cream)}
+    .service-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+    .service-card{position:relative;background:linear-gradient(160deg,#fffefa,#f7f2e8);border:1px solid #e6dfd1;padding:0 23px 25px;min-height:390px;overflow:hidden;transition:transform .25s,border-color .25s,box-shadow .25s}
+    .service-card:hover{box-shadow:0 18px 38px #16263b12}
+    .service-card:hover{transform:translateY(-5px);border-color:var(--gold)}
+    .service-number{font-family:Georgia,serif;font-size:1.4rem;color:#9b742c;position:absolute;top:155px;left:23px;width:48px;height:48px;display:grid;place-items:center;background:#fffdf8;border:1px solid #d9b76c;border-radius:50%;z-index:2}.service-photo{height:175px;margin:0 -23px 28px;background-size:cover;background-position:center;position:relative}.service-photo:after{content:'';position:absolute;inset:0;background:linear-gradient(0deg,#07111f55,transparent 65%)}
+    .service-card h3{font-family:Georgia,serif;font-weight:500;font-size:1.45rem;line-height:1.2;margin:20px 0 12px}
+    .service-card p{color:#6b7583;font-size:.9rem}
+    .text-link{display:inline-flex;align-items:center;gap:9px;color:#8c6b2d;font-size:.82rem;font-weight:800;margin-top:10px}
+    .about{background:white}
+    .about-grid{display:grid;grid-template-columns:.85fr 1.15fr;gap:76px;align-items:center}
+    .about-panel{min-height:430px;background:var(--navy);color:white;padding:38px;position:relative;overflow:hidden}
+    .about-panel:after{content:"P";font-family:Georgia,serif;font-size:24rem;line-height:1;position:absolute;right:-20px;bottom:-105px;color:#c9a45c12}
+    .about-panel .small{color:var(--gold-light);letter-spacing:.18em;text-transform:uppercase;font-size:.7rem;font-weight:800}
+    .about-panel h3{position:relative;z-index:1;font-family:Georgia,serif;font-size:2.2rem;font-weight:500;line-height:1.15;margin-top:90px;max-width:340px}
+    .about-panel p{position:relative;z-index:1;color:#c0c8d4;font-size:.9rem;max-width:330px}
+    .about-copy p{color:#667285}
+    .check-list{list-style:none;padding:0;margin:24px 0}
+    .check-list li{padding:10px 0;border-bottom:1px solid #e9e5dc;color:#253348;font-size:.9rem}
+    .check-list li:before{content:"✓";color:#a78036;font-weight:900;margin-right:12px}
+    .process{background:#101d30;color:white}
+    .process .section-head p{color:#b4bfce}
+    .process-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:0;border-top:1px solid #ffffff2a}
+    .process-step{padding:28px 24px 0 0;margin-right:22px}
+    .process-step .num{color:var(--gold);font-family:Georgia,serif;font-size:2.2rem}
+    .process-step h3{font-family:Georgia,serif;font-size:1.2rem;font-weight:500;margin:12px 0}
+    .process-step p{color:#aeb9c9;font-size:.84rem}
+    .cta-band{background:var(--gold);padding:55px 0}
+    .cta-inner{display:flex;align-items:center;justify-content:space-between;gap:30px}
+    .cta-inner h2{font-size:clamp(1.9rem,3.5vw,3rem);margin:0;max-width:700px;color:#101827}
+    .btn-dark{background:var(--navy);color:white;white-space:nowrap}
+    .btn-dark:hover{background:#1a2b43}
+    footer{background:#070d17;color:#e9edf3;padding:60px 0 24px}
+    .footer-grid{display:grid;grid-template-columns:1.2fr .8fr 1fr;gap:50px;padding-bottom:42px}
+    .footer-brand{font-weight:900;letter-spacing:.1em;font-size:1.1rem}
+    .footer-brand span{display:block;color:var(--gold);font-size:.62rem;letter-spacing:.34em}
+    footer p,footer a{color:#aeb8c6;font-size:.84rem}
+    footer h4{font-size:.77rem;letter-spacing:.14em;text-transform:uppercase;color:var(--gold-light);margin:0 0 16px}
+    .footer-links{display:grid;gap:10px}
+    .footer-bottom{border-top:1px solid #ffffff1a;padding-top:20px;display:flex;justify-content:space-between;gap:18px;color:#7f8b9c;font-size:.73rem}
+    .whatsapp{position:fixed;right:22px;bottom:22px;z-index:60;background:#1f9d65;color:white;padding:13px 17px;box-shadow:0 10px 28px #0003;font-size:.82rem;font-weight:800;display:flex;align-items:center;gap:9px}
+    .whatsapp:hover{background:#168452}
+    @media(max-width:900px){
+      .hero-grid{grid-template-columns:1fr;gap:30px;padding:64px 0 72px}
+      .hero-visual{min-height:300px;max-width:720px;width:100%}
+      .service-grid{grid-template-columns:repeat(2,1fr)}
+      .about-grid{grid-template-columns:1fr;gap:36px}
+      .about-panel{min-height:330px}.about-panel h3{margin-top:50px}
+      .process-grid{grid-template-columns:repeat(2,1fr);row-gap:25px}
+      .footer-grid{grid-template-columns:1fr 1fr}
+      .footer-grid>div:first-child{grid-column:1/-1}
+    }
+    @media(max-width:640px){
+      .container{width:min(100% - 30px,1160px)}
+      .topbar .container{justify-content:center;text-align:center}.topbar .top-extra{display:none}
+      .nav{height:72px}.brand img{width:190px;height:56px}
+      .menu-toggle{display:block}
+      nav{display:none;position:absolute;left:0;right:0;top:72px;background:#0b1424;border-bottom:1px solid var(--line);padding:22px 24px 26px;align-items:stretch;gap:20px;flex-direction:column}
+      nav.open{display:flex}
+      .nav-cta{display:none}
+      .hero{min-height:auto}.hero-grid{padding:66px 0 76px}
+      .hero h1{font-size:clamp(2.8rem,13vw,4.3rem)}
+      .lead{font-size:.98rem}
+      .hero-visual{min-height:240px}.visual-inner{inset:20px 0 0 20px}.visual-label{padding:13px 16px;max-width:225px}
+      .trust-grid{grid-template-columns:1fr;padding:10px 0}
+      .trust-item,.trust-item:first-child{padding:15px 0;border-right:0;border-bottom:1px solid #e9e3d8}
+      .trust-item:last-child{border-bottom:0}
+      section{padding:70px 0}
+      .service-grid{grid-template-columns:1fr}.service-card{min-height:0;padding:0 22px 24px}.service-photo{height:190px;margin:0 -22px 28px}.service-number{top:170px;left:22px}
+      .process-grid{grid-template-columns:1fr}.process-step{padding-top:22px}
+      .cta-inner{align-items:flex-start;flex-direction:column}
+      .footer-grid{grid-template-columns:1fr;gap:30px}.footer-grid>div:first-child{grid-column:auto}
+      .footer-bottom{flex-direction:column}
+      .whatsapp{right:12px;bottom:12px;padding:12px 14px}
+    }
+  
+/* Luxury premium refinement */
+.brand img, .logo img, header img[alt*="Logo"] {
+  width: clamp(185px, 19vw, 250px) !important;
+  max-height: 66px !important;
+  height: auto !important;
+  object-fit: contain !important;
+  object-position: left center !important;
+}
+header .container, .nav-inner, .navbar-inner {
+  gap: clamp(20px, 3vw, 44px);
+}
+.hero {
+  background-position: center center;
+}
+.hero h1 {
+  max-width: 760px;
+  font-size: clamp(2.9rem, 5.3vw, 5.6rem);
+  line-height: .98;
+  letter-spacing: -.045em;
+  text-wrap: balance;
+}
+.hero .lead, .hero p {
+  max-width: 600px;
+}
+.hero-visual img, .hero img {
+  object-fit: cover;
+  object-position: center;
+}
+.hero-visual img[src*="LOGO"], .hero img[alt*="Logo"] {
+  object-fit: contain !important;
+}
+.service-card img, .services img, .service-image img {
+  width: 100%;
+  height: 170px;
+  object-fit: cover;
+  object-position: center;
+}
+.service-card {
+  overflow: hidden;
+  border-radius: 8px;
+}
+button, .btn, a.button {
+  transition: transform .2s ease, box-shadow .2s ease, background .2s ease;
+}
+button:hover, .btn:hover, a.button:hover {
+  transform: translateY(-2px);
+}
+@media (max-width: 900px) {
+  .hero h1 { font-size: clamp(2.5rem, 8vw, 4rem); }
+  .brand img, .logo img, header img[alt*="Logo"] {
+    width: 180px !important;
+    max-height: 56px !important;
+  }
+}
+@media (max-width: 600px) {
+  .hero h1 { font-size: clamp(2.2rem, 10vw, 3.2rem); line-height: 1.02; }
+  .hero-visual { min-height: 280px; }
+}
 
-    * { box-sizing: border-box; }
-    html { scroll-behavior: smooth; }
-    body {
-      margin: 0;
-      font-family: Arial, Helvetica, sans-serif;
-      color: #19253a;
-      line-height: 1.7;
-      background: var(--cream);
-    }
-    a { text-decoration: none; }
-    .container { width: min(1120px, 90%); margin: auto; }
 
-    header {
-      background: rgba(8,20,38,.97);
-      color: white;
-      position: sticky;
-      top: 0;
-      z-index: 10;
-      border-bottom: 1px solid rgba(201,164,92,.35);
-    }
-    nav {
-      min-height: 78px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      gap: 20px;
-    }
-    .brand {
-      color: white;
-      font-size: 18px;
-      font-weight: 800;
-      letter-spacing: 1px;
-      line-height: 1.25;
-    }
-    .brand span {
-      display: block;
-      color: var(--gold);
-      font-size: 11px;
-      letter-spacing: 4px;
-      margin-top: 5px;
-    }
-    .navlinks { display: flex; gap: 22px; align-items: center; }
-    .navlinks a { color: #f5f5f5; font-size: 13px; }
-    .navlinks a:hover { color: var(--gold); }
+/* Reference-inspired luxury hero: distinct architectural image, premium framing */
+:root { --navy:#061322; --gold:#d8ad57; --gold-light:#f4d995; --cream:#f7f3eb; }
+header { background:rgba(4,14,27,.97) !important; border-bottom:1px solid rgba(216,173,87,.45) !important; }
+.hero { position:relative; isolation:isolate; overflow:hidden; }
+.hero:before {
+  background:
+    linear-gradient(90deg,rgba(3,12,23,.97) 0%,rgba(4,15,29,.90) 38%,rgba(4,15,29,.50) 70%,rgba(4,15,29,.38) 100%),
+    radial-gradient(ellipse at 75% 48%,rgba(216,173,87,.18),transparent 44%),
+    url("https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=2200&q=90") center/cover no-repeat !important;
+}
+.hero h1 { font-size:clamp(3.15rem,5.4vw,5.9rem) !important; line-height:.98 !important; max-width:800px !important; letter-spacing:-.045em !important; }
+.hero h1 em { color:#e8c46e !important; }
+.hero .lead { max-width:610px !important; font-size:clamp(1rem,1.2vw,1.18rem) !important; line-height:1.75 !important; }
+.hero-visual { min-height:clamp(340px,39vw,560px) !important; }
+.hero-visual .visual-inner { inset:22px 0 18px 22px !important; background:#0a1728 !important; border:1px solid rgba(230,193,111,.75) !important; overflow:hidden !important; }
+.hero-visual .visual-inner:before, .hero-visual .visual-inner:after { display:none !important; }
+.hero-visual img {
+  display:block !important; width:100% !important; height:100% !important;
+  object-fit:cover !important; object-position:center !important; filter:saturate(.88) contrast(1.06) !important;
+}
+.visual-frame { inset:4px 12px 0 0 !important; border:1px solid rgba(230,193,111,.75) !important; }
+.visual-label { background:linear-gradient(110deg,#f4d995,#c79b42) !important; padding:18px 22px !important; }
+.brand img, .logo img, header img[alt*="Logo"] { width:clamp(210px,22vw,300px) !important; max-height:76px !important; height:auto !important; object-fit:contain !important; object-position:left center !important; }
+.hero-note { letter-spacing:.12em !important; }
+.btn, button, a.button { border-radius:3px !important; }
+.service-card { border-radius:4px !important; box-shadow:0 8px 24px rgba(9,20,35,.06) !important; }
+@media(max-width:900px) {
+ .hero h1 { font-size:clamp(2.7rem,7.2vw,4.3rem) !important; }
+ .hero-visual { min-height:330px !important; }
+}
+@media(max-width:600px) {
+ .hero h1 { font-size:clamp(2.25rem,9.5vw,3.25rem) !important; }
+ .hero-visual { min-height:260px !important; }
+ .brand img, .logo img, header img[alt*="Logo"] { width:185px !important; max-height:58px !important; }
+}
 
-    .hero {
-      background:
-        radial-gradient(ellipse at 80% 20%, #1c365b 0%, transparent 45%),
-        linear-gradient(130deg, var(--navy), #102441 70%, #081426);
-      color: white;
-      padding: 100px 0 95px;
-      overflow: hidden;
-    }
-    .eyebrow {
-      color: var(--gold);
-      letter-spacing: 3px;
-      text-transform: uppercase;
-      font-size: 12px;
-      font-weight: bold;
-    }
-    h1 {
-      font-size: clamp(36px, 5vw, 62px);
-      line-height: 1.12;
-      letter-spacing: -1.5px;
-      margin: 20px 0;
-      max-width: 800px;
-    }
-    h1 em { color: var(--gold); font-style: normal; }
-    .hero p { max-width: 650px; color: var(--muted); font-size: 17px; }
-    .actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 30px; }
-    .btn {
-      display: inline-block;
-      padding: 13px 22px;
-      border-radius: 5px;
-      font-weight: bold;
-      font-size: 14px;
-      transition: .2s;
-    }
-    .btn-gold { background: var(--gold); color: var(--navy); }
-    .btn-outline { border: 1px solid #718096; color: white; }
-    .btn:hover { transform: translateY(-2px); }
-
-    .trust {
-      background: white;
-      border-bottom: 1px solid #e5e2da;
-    }
-    .trust-inner {
-      display: grid;
-      grid-template-columns: repeat(3,1fr);
-      gap: 20px;
-      padding: 24px 0;
-      text-align: center;
-      font-size: 13px;
-      font-weight: bold;
-    }
-    .trust strong { color: #9a7534; display: block; font-size: 15px; }
-
-    section { padding: 76px 0; }
-    .section-head { max-width: 700px; margin-bottom: 34px; }
-    .section-head h2 {
-      color: var(--navy);
-      font-size: clamp(28px,4vw,39px);
-      line-height: 1.2;
-      margin: 10px 0;
-    }
-    .section-head p { color: #637087; }
-    .cards {
-      display: grid;
-      grid-template-columns: repeat(3,1fr);
-      gap: 20px;
-    }
-    .card {
-      background: white;
-      border: 1px solid #e8e5dd;
-      border-radius: 10px;
-      padding: 27px;
-      box-shadow: 0 8px 25px rgba(10,25,45,.04);
-    }
-    .number { color: var(--gold); font-weight: 800; font-size: 13px; }
-    .card h3 { color: var(--navy); font-size: 19px; margin: 9px 0; }
-    .card p { color: #687489; font-size: 14px; margin-bottom: 0; }
-
-    .about { background: white; }
-    .about-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 55px;
-      align-items: center;
-    }
-    .about h2 { color: var(--navy); font-size: 36px; line-height: 1.2; }
-    .about p { color: #647087; }
-    .principles {
-      background: var(--navy);
-      color: white;
-      border-radius: 12px;
-      padding: 30px;
-    }
-    .principles h3 { color: var(--gold); margin-top: 0; }
-    .principles li { margin: 10px 0; color: #d5dce7; }
-
-    .process { background: #f0eee8; }
-    .step {
-      display: flex;
-      gap: 18px;
-      margin-bottom: 22px;
-    }
-    .step-num {
-      flex: 0 0 38px;
-      height: 38px;
-      display: grid;
-      place-items: center;
-      border-radius: 50%;
-      background: var(--navy);
-      color: var(--gold);
-      font-weight: bold;
-    }
-    .step h3 { margin: 0; font-size: 17px; color: var(--navy); }
-    .step p { margin: 4px 0 0; color: #657187; font-size: 14px; }
-
-    .contact {
-      background: var(--navy);
-      color: white;
-    }
-    .contact h2 { font-size: clamp(28px,4vw,40px); line-height: 1.2; }
-    .contact p { color: var(--muted); }
-    .contact-grid {
-      display: grid;
-      grid-template-columns: 1.1fr .9fr;
-      gap: 40px;
-      align-items: center;
-    }
-    .contact-box {
-      padding: 25px;
-      border: 1px solid #344660;
-      border-radius: 10px;
-      background: rgba(255,255,255,.035);
-    }
-    .contact-box a { color: var(--gold); overflow-wrap: anywhere; }
-    footer {
-      background: #050d19;
-      color: #aab4c4;
-      padding: 25px 0;
-      font-size: 12px;
-    }
-    footer .container {
-      display: flex;
-      justify-content: space-between;
-      gap: 15px;
-      flex-wrap: wrap;
-    }
-
-    @media (max-width: 760px) {
-      .navlinks { gap: 12px; }
-      .navlinks a { font-size: 11px; }
-      .brand { font-size: 14px; }
-      .brand span { font-size: 9px; letter-spacing: 2px; }
-      .hero { padding: 75px 0; }
-      .trust-inner { grid-template-columns: 1fr; gap: 14px; }
-      .cards, .about-grid, .contact-grid { grid-template-columns: 1fr; }
-      section { padding: 55px 0; }
-      .about-grid { gap: 25px; }
-    }
-    @media (max-width: 420px) {
-      .navlinks { gap: 8px; }
-      .navlinks a { font-size: 10px; }
-      .brand { font-size: 12px; }
-    }
-  </style>
+</style>
 </head>
 <body>
+  <div class="topbar">
+    <div class="container">
+      <span>BUSINESS &amp; LEGAL SUPPORT</span>
+      <span class="top-extra">Pendampingan bisnis yang profesional, terarah, dan transparan</span>
+    </div>
+  </div>
   <header>
-    <nav class="container">
-      <a class="brand" href="#home" aria-label="PERMITEX GLOBAL MANDIRI">   <img     <a class="brand" href="#home" aria-label="PERMITEX GLOBAL MANDIRI">   <img     src="LOGO%20PERMITEX.png"     alt="Logo Resmi PERMITEX GLOBAL MANDIRI"     style="display:block;width:180px;height:auto;max-height:65px;object-fit:contain;"   > </a>     alt="Logo Resmi PERMITEX GLOBAL MANDIRI"     style="display:block;width:180px;height:auto;max-height:65px;object-fit:contain;"   > </a>
-        PERMITEX
-        <span>GLOBAL MANDIRI</span>
+    <div class="container nav">
+      <a class="brand" href="#home" aria-label="PERMITEX GLOBAL MANDIRI">
+        <img src="LOGO%20PERMITEX.png" alt="Logo resmi PERMITEX GLOBAL MANDIRI"
+             onerror="this.style.display='none';this.nextElementSibling.style.display='block'">
+        <span class="brand-fallback">PERMITEX<span>GLOBAL MANDIRI</span></span>
       </a>
-      <div class="navlinks">
+      <button class="menu-toggle" id="menuToggle" aria-label="Buka menu navigasi" aria-expanded="false">☰</button>
+      <nav id="mainNav" aria-label="Navigasi utama">
         <a href="#layanan">Layanan</a>
-        <a href="#tentang">Tentang</a>
+        <a href="#tentang">Tentang Kami</a>
+        <a href="#proses">Alur Kerja</a>
         <a href="#kontak">Kontak</a>
-      </div>
-    </nav>
+      </nav>
+      <a class="btn btn-gold nav-cta" href="https://wa.me/6282343911117?text=Halo%20PERMITEX%2C%20saya%20ingin%20konsultasi%20layanan." target="_blank" rel="noopener">Konsultasi <span aria-hidden="true">↗</span></a>
+    </div>
   </header>
 
   <main>
     <section class="hero" id="home">
-      <div class="container">
-        <div class="eyebrow">Business & Legal Support</div>
-        <h1>Bangun Bisnis dengan <em>Langkah yang Tepat.</em></h1>
-        <p>
-          PERMITEX GLOBAL MANDIRI mendampingi kebutuhan pendirian badan usaha,
-          administrasi bisnis, dan persiapan legalitas agar perjalanan usaha
-          Anda lebih terarah dan terorganisasi.
-        </p>
-        <div class="actions">
-          <a class="btn btn-gold" href="#kontak">Konsultasi Sekarang</a>
-          <a class="btn btn-outline" href="#layanan">Jelajahi Layanan</a>
+      <div class="container hero-grid">
+        <div>
+          <span class="eyebrow">Business · Licensing · Compliance</span>
+          <h1>Solusi Perizinan &amp;<br><em>Legalitas Bisnis Anda.</em></h1>
+          <p class="lead">PERMITEX GLOBAL MANDIRI mendampingi kebutuhan pendirian badan usaha, perizinan berusaha, dokumen teknis, dan kepatuhan lingkungan melalui proses yang profesional, terstruktur, dan sesuai ketentuan yang berlaku.</p>
+          <div class="hero-actions">
+            <a class="btn btn-gold" href="https://wa.me/6282343911117?text=Halo%20PERMITEX%2C%20saya%20ingin%20konsultasi%20kebutuhan%20bisnis." target="_blank" rel="noopener">Mulai Konsultasi <span aria-hidden="true">↗</span></a>
+            <a class="btn btn-outline" href="#layanan">Jelajahi Layanan</a>
+          </div>
+          <div class="hero-note"><span class="line"></span> IDEA · PLANNING · LICENSING · REALIZATION</div>
+        </div>
+        <div class="hero-visual" aria-label="Visual abstrak arsitektur dan garis teknis">
+          <div class="visual-frame"></div><div class="visual-inner"></div>
+          <div class="visual-label"><strong>Build with confidence.</strong><span>Business &amp; legal support</span></div>
         </div>
       </div>
     </section>
 
-    <div class="trust">
-      <div class="container trust-inner">
-        <div><strong>Profesional</strong>Pendampingan terarah</div>
-        <div><strong>Transparan</strong>Ruang lingkup jelas</div>
-        <div><strong>Terintegrasi</strong>Kebutuhan bisnis dalam satu mitra</div>
+    <div class="trust-strip">
+      <div class="container trust-grid">
+        <div class="trust-item"><strong>Profesional</strong><span>Pendampingan terarah</span></div>
+        <div class="trust-item"><strong>Terstruktur</strong><span>Tahapan jelas dan terukur</span></div>
+        <div class="trust-item"><strong>Transparan</strong><span>Ruang lingkup dijelaskan di awal</span></div>
+        <div class="trust-item"><strong>Terpercaya</strong><span>Fokus pada kepatuhan dan kualitas</span></div>
       </div>
     </div>
 
-    <section id="layanan">
+    <section class="services" id="layanan">
       <div class="container">
         <div class="section-head">
-          <div class="eyebrow">Layanan Kami</div>
-          <h2>Dukungan untuk Kebutuhan Bisnis Anda</h2>
-          <p>
-            Layanan disesuaikan dengan bentuk usaha, kegiatan, lokasi,
-            persyaratan, serta ruang lingkup pekerjaan yang disepakati.
-          </p>
+          <span class="eyebrow">Layanan Kami</span>
+          <h2>Solusi lengkap untuk<br>kebutuhan bisnis Anda.</h2>
+          <p>Kami membantu memetakan kebutuhan, menyiapkan dokumen, dan mendampingi proses sesuai persyaratan yang berlaku. Ruang lingkup setiap pekerjaan dikonfirmasi terlebih dahulu.</p>
         </div>
-        <div class="cards">
-          <article class="card">
-            <div class="number">01 / BUSINESS SETUP</div>
+        <div class="service-grid">
+          <article class="service-card">
+            <div class="service-photo" style="background-image:url(&quot;https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=900&q=85&quot;)" aria-hidden="true"></div>
+          <div class="service-number">01</div>
             <h3>Pendirian Badan Usaha</h3>
-            <p>Pendampingan pendirian PT Perorangan, PT, CV, Firma, dan bentuk usaha lain sesuai ketentuan.</p>
+            <p>Pendampingan persiapan pendirian PT, CV, firma, dan bentuk usaha lain sesuai kebutuhan serta ketentuan yang berlaku.</p>
+            <a class="text-link" href="https://wa.me/6282343911117?text=Halo%20PERMITEX%2C%20saya%20ingin%20konsultasi%20pendirian%20badan%20usaha." target="_blank" rel="noopener">Diskusikan kebutuhan <span>↗</span></a>
           </article>
-          <article class="card">
-            <div class="number">02 / BUSINESS LICENSING</div>
-            <h3>OSS, NIB & KBLI</h3>
-            <p>Pendampingan administrasi usaha, pemetaan KBLI, serta pemeriksaan kebutuhan perizinan berdasarkan kegiatan bisnis.</p>
+          <article class="service-card">
+            <div class="service-photo" style="background-image:url(&quot;https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&fit=crop&w=900&q=85&quot;)" aria-hidden="true"></div>
+          <div class="service-number">02</div>
+            <h3>Perizinan Berusaha</h3>
+            <p>Pendampingan administrasi dan proses perizinan melalui sistem terkait, berdasarkan jenis kegiatan dan persyaratan usaha.</p>
+            <a class="text-link" href="https://wa.me/6282343911117?text=Halo%20PERMITEX%2C%20saya%20ingin%20konsultasi%20perizinan%20berusaha." target="_blank" rel="noopener">Diskusikan kebutuhan <span>↗</span></a>
           </article>
-          <article class="card">
-            <div class="number">03 / SPATIAL PLANNING</div>
-            <h3>KKPR / PKKPR</h3>
-            <p>Pendampingan dokumen kesesuaian kegiatan pemanfaatan ruang berdasarkan lokasi dan ketentuan yang berlaku.</p>
+          <article class="service-card">
+            <div class="service-photo" style="background-image:url(&quot;https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1400&q=85" aria-hidden="true"></div>
+          <div class="service-number">03</div>
+            <h3>PBG &amp; SLF</h3>
+            <p>Pendampingan persiapan dokumen dan koordinasi proses Persetujuan Bangunan Gedung serta Sertifikat Laik Fungsi sesuai lingkup pekerjaan.</p>
+            <a class="text-link" href="https://wa.me/6282343911117?text=Halo%20PERMITEX%2C%20saya%20ingin%20konsultasi%20PBG%20atau%20SLF." target="_blank" rel="noopener">Diskusikan kebutuhan <span>↗</span></a>
           </article>
-          <article class="card">
-            <div class="number">04 / ENVIRONMENT</div>
-            <h3>Dokumen Lingkungan</h3>
-            <p>Pendampingan penapisan dan persiapan dokumen lingkungan sesuai karakteristik kegiatan usaha.</p>
+          <article class="service-card">
+            <div class="service-photo" style="background-image:url(&quot;https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=900&q=85&quot;)" aria-hidden="true"></div>
+          <div class="service-number">04</div>
+            <h3>PKKPR &amp; Tata Ruang</h3>
+            <p>Pendampingan administrasi dan penyiapan data pendukung kesesuaian kegiatan pemanfaatan ruang berdasarkan lokasi dan rencana kegiatan.</p>
+            <a class="text-link" href="https://wa.me/6282343911117?text=Halo%20PERMITEX%2C%20saya%20ingin%20konsultasi%20PKKPR%20dan%20tata%20ruang." target="_blank" rel="noopener">Diskusikan kebutuhan <span>↗</span></a>
           </article>
-          <article class="card">
-            <div class="number">05 / BUILDING</div>
-            <h3>PBG & SLF</h3>
-            <p>Koordinasi persiapan dokumen bangunan dan pendampingan proses sesuai persyaratan teknis.</p>
+          <article class="service-card">
+            <div class="service-photo" style="background-image:url(&quot;https://images.unsplash.com/photo-1516937941344-00b4e0337589?auto=format&fit=crop&w=900&q=85&quot;)" aria-hidden="true"></div>
+          <div class="service-number">05</div>
+            <h3>Dokumen Lingkungan &amp; Air</h3>
+            <p>Pendampingan kebutuhan dokumen sesuai kegiatan, termasuk konsultasi awal terkait IPAL, air tanah, dan persyaratan teknis terkait.</p>
+            <a class="text-link" href="https://wa.me/6282343911117?text=Halo%20PERMITEX%2C%20saya%20ingin%20konsultasi%20dokumen%20lingkungan%20atau%20air." target="_blank" rel="noopener">Diskusikan kebutuhan <span>↗</span></a>
           </article>
-          <article class="card">
-            <div class="number">06 / BUSINESS SUPPORT</div>
-            <h3>Administrasi & Dokumen</h3>
-            <p>Pengelolaan dokumen perusahaan, administrasi proyek, dan dukungan kebutuhan bisnis berdasarkan kesepakatan.</p>
+          <article class="service-card">
+            <div class="service-photo" style="background-image:url(&quot;https://images.unsplash.com/photo-1455390582262-044cdeel?auto=format&fit=crop&w=900&q=85&quot;)" aria-hidden="true"></div>
+          <div class="service-number">06</div>
+            <h3>Konsultasi Administrasi Bisnis</h3>
+            <p>Bantuan pemetaan kebutuhan dokumen, alur administrasi, dan tindak lanjut agar proses bisnis lebih terstruktur.</p>
+            <a class="text-link" href="https://wa.me/6282343911117?text=Halo%20PERMITEX%2C%20saya%20ingin%20konsultasi%20administrasi%20bisnis." target="_blank" rel="noopener">Diskusikan kebutuhan <span>↗</span></a>
           </article>
         </div>
       </div>
@@ -313,105 +357,88 @@
 
     <section class="about" id="tentang">
       <div class="container about-grid">
-        <div>
-          <div class="eyebrow">Tentang Kami</div>
-          <h2>Mitra Profesional untuk Langkah Bisnis Anda</h2>
-          <p>
-            PERMITEX GLOBAL MANDIRI menyediakan pendampingan administrasi
-            usaha dan kebutuhan legalitas bisnis dengan pendekatan yang
-            terstruktur, komunikatif, dan berorientasi pada kebutuhan klien.
-          </p>
-          <p>
-            Kami membantu klien memahami tahapan, menyiapkan dokumen, dan
-            menindaklanjuti proses sesuai ruang lingkup layanan yang disepakati.
-          </p>
+        <div class="about-panel">
+          <span class="small">PERMITEX GLOBAL MANDIRI</span>
+          <h3>Keputusan bisnis lebih baik dimulai dari persiapan yang tepat.</h3>
+          <p>Kami mendampingi kebutuhan administrasi dan perizinan agar langkah usaha lebih terarah.</p>
         </div>
-        <div class="principles">
-          <h3>Prinsip Kerja Kami</h3>
-          <ul>
-            <li>Kejelasan ruang lingkup dan biaya.</li>
-            <li>Pengelolaan dokumen secara tertib.</li>
-            <li>Komunikasi dan pembaruan progres.</li>
-            <li>Koordinasi dengan pihak berwenang atau tenaga kompeten bila diperlukan.</li>
-            <li>Tidak menjanjikan penerbitan izin di luar kewenangan kami.</li>
+        <div class="about-copy">
+          <span class="eyebrow">Tentang Kami</span>
+          <h2>Mitra pendampingan untuk langkah bisnis yang lebih terukur.</h2>
+          <p>PERMITEX GLOBAL MANDIRI menyediakan dukungan untuk kebutuhan pendirian badan usaha, administrasi bisnis, serta pendampingan perizinan dan dokumen teknis. Setiap kebutuhan ditinjau berdasarkan informasi usaha, lokasi, dan ruang lingkup yang disepakati.</p>
+          <ul class="check-list">
+            <li>Identifikasi kebutuhan dan dokumen awal</li>
+            <li>Penjelasan tahapan, biaya jasa, dan ruang lingkup</li>
+            <li>Pendampingan proses dan tindak lanjut administratif</li>
+            <li>Komunikasi status pekerjaan secara terarah</li>
           </ul>
+          <a class="btn btn-gold" href="https://wa.me/6282343911117?text=Halo%20PERMITEX%2C%20saya%20ingin%20membahas%20kebutuhan%20bisnis%20saya." target="_blank" rel="noopener">Bicarakan Kebutuhan Anda ↗</a>
         </div>
       </div>
     </section>
 
-    <section class="process">
+    <section class="process" id="proses">
       <div class="container">
         <div class="section-head">
-          <div class="eyebrow">Alur Layanan</div>
-          <h2>Jelas dari Awal hingga Tindak Lanjut</h2>
+          <span class="eyebrow">Cara Kerja</span>
+          <h2>Jelas sejak konsultasi pertama.</h2>
+          <p>Alur kerja dirancang agar calon klien memahami kebutuhan dokumen, lingkup layanan, serta tindak lanjut yang perlu dilakukan.</p>
         </div>
-        <div class="step">
-          <div class="step-num">1</div>
-          <div>
-            <h3>Konsultasi Awal</h3>
-            <p>Ceritakan kebutuhan dan kondisi usaha Anda kepada tim kami.</p>
-          </div>
-        </div>
-        <div class="step">
-          <div class="step-num">2</div>
-          <div>
-            <h3>Pemeriksaan Kebutuhan</h3>
-            <p>Kami memetakan dokumen, persyaratan, dan ruang lingkup pekerjaan.</p>
-          </div>
-        </div>
-        <div class="step">
-          <div class="step-num">3</div>
-          <div>
-            <h3>Penawaran dan Persetujuan</h3>
-            <p>Biaya, tahapan, dan keluaran pekerjaan dijelaskan sebelum proses dimulai.</p>
-          </div>
-        </div>
-        <div class="step">
-          <div class="step-num">4</div>
-          <div>
-            <h3>Pendampingan dan Tindak Lanjut</h3>
-            <p>Proses ditindaklanjuti sesuai persyaratan dan kesepakatan dengan klien.</p>
-          </div>
+        <div class="process-grid">
+          <div class="process-step"><div class="num">01</div><h3>Konsultasi awal</h3><p>Kenali jenis usaha, lokasi, target, dan kebutuhan yang ingin diselesaikan.</p></div>
+          <div class="process-step"><div class="num">02</div><h3>Pemetaan kebutuhan</h3><p>Tinjau dokumen, persyaratan, dan tahapan yang relevan untuk kasus Anda.</p></div>
+          <div class="process-step"><div class="num">03</div><h3>Penawaran transparan</h3><p>Sepakati ruang lingkup, biaya jasa, estimasi, dan tanggung jawab masing-masing pihak.</p></div>
+          <div class="process-step"><div class="num">04</div><h3>Pendampingan proses</h3><p>Kerjakan tahapan yang disepakati dan komunikasikan tindak lanjut yang diperlukan.</p></div>
         </div>
       </div>
     </section>
 
-    <section class="contact" id="kontak">
-      <div class="container contact-grid">
-        <div>
-          <div class="eyebrow">Hubungi Kami</div>
-          <h2>Mari Diskusikan Kebutuhan Bisnis Anda.</h2>
-          <p>
-            Hubungi PERMITEX GLOBAL MANDIRI untuk konsultasi awal dan
-            informasi ruang lingkup layanan.
-          </p>
-          <div class="actions">
-            <a class="btn btn-gold"
-               href="https://wa.me/6282343911117?text=Halo%20PERMITEX%20GLOBAL%20MANDIRI%2C%20saya%20ingin%20konsultasi%20layanan."
-               target="_blank" rel="noopener noreferrer">Chat WhatsApp</a>
-            <a class="btn btn-outline"
-               href="mailto:permitexglobalmandiri2@gmail.com">Kirim Email</a>
-          </div>
-        </div>
-        <div class="contact-box">
-          <h3>PERMITEX GLOBAL MANDIRI</h3>
-          <p>WhatsApp<br><a href="https://wa.me/6282343911117" target="_blank" rel="noopener noreferrer">+62 823-4391-1117</a></p>
-          <p>Email<br><a href="mailto:permitexglobalmandiri2@gmail.com">permitexglobalmandiri2@gmail.com</a></p>
-          <p>Alamat administrasi<br>Jl. Langlangbuana No. 425, Kuningan, Jawa Barat 45511</p>
-        </div>
+    <section class="cta-band" id="kontak">
+      <div class="container cta-inner">
+        <h2>Setiap usaha punya kebutuhan berbeda. Mari mulai dengan konsultasi yang tepat.</h2>
+        <a class="btn btn-dark" href="https://wa.me/6282343911117?text=Halo%20PERMITEX%20GLOBAL%20MANDIRI%2C%20saya%20ingin%20konsultasi." target="_blank" rel="noopener">Hubungi PERMITEX ↗</a>
       </div>
     </section>
   </main>
 
   <footer>
     <div class="container">
-      <div>© <span id="year"></span> PERMITEX GLOBAL MANDIRI</div>
-      <div>Business & Legal Support</div>
+      <div class="footer-grid">
+        <div>
+          <div class="footer-brand">PERMITEX<span>GLOBAL MANDIRI</span></div>
+          <p style="max-width:360px;margin-top:18px">Business &amp; Legal Support — pendampingan kebutuhan badan usaha, administrasi, perizinan, dan dokumen teknis secara terarah.</p>
+        </div>
+        <div>
+          <h4>Navigasi</h4>
+          <div class="footer-links"><a href="#layanan">Layanan</a><a href="#tentang">Tentang Kami</a><a href="#proses">Alur Kerja</a><a href="#kontak">Kontak</a></div>
+        </div>
+        <div>
+          <h4>Hubungi Kami</h4>
+          <div class="footer-links">
+            <a href="https://wa.me/6282343911117" target="_blank" rel="noopener">WhatsApp: +62 823-4391-1117</a>
+            <a href="mailto:permitexglobalmandiri2@gmail.com">permitexglobalmandiri2@gmail.com</a>
+            <p style="margin:0">Kuningan, Jawa Barat, Indonesia</p>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom"><span>© <span id="year"></span> PERMITEX GLOBAL MANDIRI. Hak cipta dilindungi.</span><span>Informasi layanan mengikuti hasil peninjauan dan ketentuan yang berlaku.</span></div>
     </div>
   </footer>
-
+  <a class="whatsapp" href="https://wa.me/6282343911117?text=Halo%20PERMITEX%20GLOBAL%20MANDIRI%2C%20saya%20ingin%20konsultasi." target="_blank" rel="noopener" aria-label="Hubungi PERMITEX melalui WhatsApp">WhatsApp ↗</a>
   <script>
-    document.getElementById("year").textContent = new Date().getFullYear();
+    const menuToggle = document.getElementById('menuToggle');
+    const mainNav = document.getElementById('mainNav');
+    menuToggle.addEventListener('click', () => {
+      const open = mainNav.classList.toggle('open');
+      menuToggle.setAttribute('aria-expanded', String(open));
+      menuToggle.textContent = open ? '✕' : '☰';
+    });
+    mainNav.querySelectorAll('a').forEach(link => link.addEventListener('click', () => {
+      mainNav.classList.remove('open');
+      menuToggle.setAttribute('aria-expanded', 'false');
+      menuToggle.textContent = '☰';
+    }));
+    document.getElementById('year').textContent = new Date().getFullYear();
   </script>
 </body>
 </html>
