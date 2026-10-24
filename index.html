@@ -245,7 +245,60 @@ header { background:rgba(4,14,27,.97) !important; border-bottom:1px solid rgba(2
  .brand img, .logo img, header img[alt*="Logo"] { width:185px !important; max-height:58px !important; }
 }
 
-</style>
+/* PERMITEX — HERO REFERENCE REFINEMENT */
+.hero {
+  min-height: 580px !important;
+  background: #061322 !important;
+}
+
+.hero:before {
+  background:
+    linear-gradient(90deg, rgba(3,10,20,.94) 0%, rgba(3,10,20,.78) 38%, rgba(3,10,20,.24) 75%, rgba(3,10,20,.12) 100%),
+    linear-gradient(0deg, rgba(3,10,20,.55), transparent 45%),
+    url("https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=2200&q=90") center 48% / cover no-repeat !important;
+}
+
+.hero-grid {
+  grid-template-columns: minmax(0, 1fr) !important;
+  padding: 66px 0 72px !important;
+}
+
+.hero-grid > div:first-child {
+  max-width: 760px;
+}
+
+.hero-visual {
+  display: none !important;
+}
+
+.hero h1 {
+  max-width: 760px !important;
+  font-size: clamp(3rem, 5.5vw, 5.4rem) !important;
+  line-height: 1.02 !important;
+}
+
+.hero h1 em {
+  color: #f4d995 !important;
+}
+
+.hero .lead {
+  max-width: 610px !important;
+}
+
+@media (max-width: 640px) {
+  .hero {
+    min-height: auto !important;
+  }
+
+  .hero-grid {
+    padding: 54px 0 60px !important;
+  }
+
+  .hero h1 {
+    font-size: clamp(2.45rem, 10vw, 3.5rem) !important;
+  }
+}
+  </style>
 </head>
 <body>
   <div class="topbar">
